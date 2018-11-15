@@ -1,10 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="">
+    <meta name="description" content="A webpage displaying my resume">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ResumeRefactor</title>
+    <title>Resume</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -21,19 +21,40 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
+    <!--
+    Uncomment the <script> tag below when you're ready to add an interactive Google Map to your resume!
+  -->
+  <!-- <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
   </head>
   <body>
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Modernizr</li>
-      </ul>
+    <div id="main">
+      Hello world!
+      <div id="header" class="center-content clear-fix">
+        <ul id="topContacts" class="flex-box"></ul>
+      </div>
+      <div style="clear: both;"></div>
+      <div id="workExperience" class="gray">
+        <h2>Work Experience</h2>
+      </div>
+      <div id="projects">
+        <h2>Projects</h2>
+      </div>
+      <div id="education" class="gray">
+        <h2>Education</h2>
+      </div>
+      <div id="mapDiv">
+        <h2>Where I've Lived and Worked</h2>
+      </div>
+      <div id="lets-connect" class="dark-gray">
+        <h2 class="orange center-text">Let's Connect</h2>
+          <ul id="footerContacts" class="flex-box">
+        </ul>
+      </div>
     </div>
 
     <!-- build:js scripts/vendor.js -->
@@ -43,8 +64,43 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
+    <script src="js/jQuery.js"></script>
     <script src="scripts/helper.js"></script>
     <script src="scripts/resumeBuilder.js"></script>
     <!-- endbuild -->
+
+    <!--
+    These scripts are written in JavaScript. You'll be breaking them down as part of
+    a quiz. Essentially, the next few lines are checking to see if you have not
+    changed each section of the resume. If you have not made any changes to a section
+    of the resume, then that part of the resume does not show up. More on this in the
+    course.
+    -->
+
+    <!-- TODO: figure out if these should be transformed into tests -->
+
+    <script>
+      if(document.getElementsByClassName('flex-item').length === 0) {
+        // document.getElementById('topContacts').style.display = 'none';
+      }
+      if(document.getElementsByTagName('h1').length === 0) {
+        // document.getElementById('header').style.display = 'none';
+      }
+      if(document.getElementsByClassName('work-entry').length === 0) {
+        // document.getElementById('workExperience').style.display = 'none';
+      }
+      if(document.getElementsByClassName('project-entry').length === 0) {
+        // document.getElementById('projects').style.display = 'none';
+      }
+      if(document.getElementsByClassName('education-entry').length === 0) {
+        // document.getElementById('education').style.display = 'none';
+      }
+      if(document.getElementsByClassName('flex-item').length === 0) {
+        // document.getElementById('lets-connect').style.display = 'none';
+      }
+      if(document.getElementById('map') === null) {
+        // document.getElementById('mapDiv').style.display = 'none';
+      }
+    </script>
   </body>
 </html>
