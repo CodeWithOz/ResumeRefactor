@@ -9,7 +9,7 @@ const model = {
       mobile: '0123456789',
       email: 'codewithoz@outlook.com',
       github: 'CodeWithOz',
-      location: 'Abuja'
+      location: 'Abuja, Nigeria'
     },
     welcomeMessage: 'Greetings! I am Uche and I am happy to meet you!',
     skills: [
