@@ -135,6 +135,14 @@ const view = {
       $header.prepend(role);
       const name = replaceData('name', data.name);
       $header.prepend(name);
+
+      // add each contact to the header
+      const $contacts = $('#topContacts');
+      $.each(data.contacts, (key, value) => {
+        const entry = replaceData(key, value);
+        $contacts.append(entry);
+      });
+
     }
   },
   work: {
