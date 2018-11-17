@@ -182,8 +182,18 @@ const view = {
         const $entry = $('.work-entry').last(),
           employer = replaceData('employer', workExp.employer),
           title = replaceData('title', workExp.title),
-          heading = employer + title;
-        $entry.append(heading);
+          heading = employer + title,
+
+          // array of items to be appended to the entry
+          toAppend = [heading];
+        toAppend.push(replaceData('dates', workExp.dates));
+        toAppend.push(replaceData('location', workExp.location));
+        toAppend.push(replaceData('description', workExp.description));
+
+        // append the items
+        toAppend.forEach(item => {
+          $entry.append(item);
+        });
       });
     }
   },
