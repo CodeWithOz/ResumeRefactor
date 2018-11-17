@@ -21,8 +21,7 @@ const model = {
       'Responsive Web Design',
       'Offline Capability with Service Worker API'
     ],
-    biopic: 'images/prof_selfie_2.jpg',
-    display: () => console.log('Display function of bio section. 😄')
+    biopic: 'images/prof_selfie_2.jpg'
   },
 
   education: {
@@ -61,53 +60,46 @@ const model = {
         dates: 'July 2018 - November 2018',
         url: 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
       }
-    ],
-    display: () => console.log('Display function of education section. 😄')
+    ]
   },
 
-  work: {
-    jobs: [
-      {
-        employer: 'HubbonNG Services Limited',
-        title: 'Chief Operating Officer and Technology Lead',
-        location: 'Abuja, Nigeria',
-        dates: 'In progress',
-        description: 'Make/manage the website and other responsibilities of the COO.'
-      },
-      {
-        employer: 'DPT Laboratories',
-        title: 'Associate Scientist',
-        location: 'San Antonio, Texas, USA',
-        dates: 'August 2015 - July 2016',
-        description: 'Do lots of chemistry and generate reports about it.'
-      }
-    ],
-    display: () => console.log('Display function of work section. 😄')
-  },
+  work: [
+    {
+      employer: 'HubbonNG Services Limited',
+      title: 'Chief Operating Officer and Technology Lead',
+      location: 'Abuja, Nigeria',
+      dates: 'In progress',
+      description: 'Make/manage the website and other responsibilities of the COO.'
+    },
+    {
+      employer: 'DPT Laboratories',
+      title: 'Associate Scientist',
+      location: 'San Antonio, Texas, USA',
+      dates: 'August 2015 - July 2016',
+      description: 'Do lots of chemistry and generate reports about it.'
+    }
+  ],
 
-  projects: {
-    projects: [
-      {
-        title: 'Restaurant Reviews App',
-        dates: 'November 2018',
-        description: 'A web app providing information about restaurants in different locations.',
-        images: 'N/A'
-      },
-      {
-        title: 'Arcade Game',
-        dates: 'August 2018 - September 2018',
-        description: 'A timed game that involves collecting tokens while evading enemies.',
-        images: 'N/A'
-      },
-      {
-        title: 'Memory Game',
-        dates: 'August 2018',
-        description: 'A game that tests the player\'s ability to remember things.',
-        images: 'N/A'
-      }
-    ],
-    display: () => console.log('Display function of projects section. 😄')
-  }
+  projects: [
+    {
+      title: 'Restaurant Reviews App',
+      dates: 'November 2018',
+      description: 'A web app providing information about restaurants in different locations.',
+      images: 'N/A'
+    },
+    {
+      title: 'Arcade Game',
+      dates: 'August 2018 - September 2018',
+      description: 'A timed game that involves collecting tokens while evading enemies.',
+      images: 'N/A'
+    },
+    {
+      title: 'Memory Game',
+      dates: 'August 2018',
+      description: 'A game that tests the player\'s ability to remember things.',
+      images: 'N/A'
+    }
+  ]
 };
 
 const view = {
