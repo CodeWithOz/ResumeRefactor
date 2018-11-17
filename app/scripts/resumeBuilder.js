@@ -124,8 +124,17 @@ const view = {
     },
     render() {
       const data = octopus.getBioData();
-      const name = this.template.name.replace('%data%', data.name);
-      $('#header').prepend(name);
+      const $header = $('#header');
+
+      // bind this object to replaceData
+      const replaceData = view.replaceData.bind(this);
+
+      // prepend the role first so that the name will be
+      // prepended above it
+      const role = replaceData('role', data.role);
+      $header.prepend(role);
+      const name = replaceData('name', data.name);
+      $header.prepend(name);
     }
   },
   work: {
@@ -161,6 +170,9 @@ const view = {
       dates: '<div class="date-text">%data%</div>',
       url: '<br><a href="#">%data%</a>'
     }
+  },
+  replaceData(propName, replacement) {
+    return this.template[propName].replace('%data%', replacement);
   },
   render() {
     this.header.render();
