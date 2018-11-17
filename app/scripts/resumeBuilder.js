@@ -5,9 +5,9 @@ const bio = {
   name: 'Uche Ozoemena',
   role: 'Web Developer',
   contacts: {
-    mobile: 0123456789,
+    mobile: '0123456789',
     email: 'codewithoz@outlook.com',
-    github: 'https://github.com/CodeWithOz',
+    github: 'CodeWithOz',
     location: 'Abuja'
   },
   welcomeMessage: 'Greetings! I am Uche and I am happy to meet you!',
