@@ -143,6 +143,19 @@ const view = {
         $contacts.append(entry);
       });
 
+      // add pic
+      const biopic = replaceData('biopic', data.biopic);
+      $header.append(biopic);
+
+      // add Skills at a Glance section
+      const msg = replaceData('welcomeMessage', data.welcomeMessage);
+      $header.append(msg);
+      $header.append(this.template.skillsStart);
+      const $skillsList = $('#skills');
+      for (const skill of data.skills) {
+        const entry = replaceData('skills', skill);
+        $skillsList.append(entry);
+      }
     }
   },
   work: {
