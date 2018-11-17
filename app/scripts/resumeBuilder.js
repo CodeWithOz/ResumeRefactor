@@ -51,13 +51,13 @@ const model = {
       {
         title: 'Google Africa Challenge',
         school: 'Udacity',
-        dates: 'May 2018 - July 2018',
+        onlineDate: 'May 2018 - July 2018',
         url: 'https://www.udacity.com/google-africa-scholarships'
       },
       {
         title: 'Front End Nanodegree',
         school: 'Udacity',
-        dates: 'July 2018 - November 2018',
+        onlineDate: 'July 2018 - November 2018',
         url: 'https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001'
       }
     ]
@@ -175,7 +175,7 @@ const view = {
       onlineStart: '<h3>Online Classes</h3>',
       title: '<a href="#">%data%',
       school: ' - %data%</a>',
-      dates: '<div class="date-text">%data%</div>',
+      onlineDate: '<div class="date-text">%data%</div>',
       url: '<br><a href="#">%data%</a>'
     }
   },
