@@ -13,7 +13,6 @@ const model = {
     },
     welcomeMessage: 'Greetings! I am Uche and I am happy to meet you!',
     skills: [
-      'Vanilla JavaScript',
       'jQuery',
       'Test-Driven Development',
       'Object-Oriented Programming',
