@@ -7,62 +7,6 @@ Don't worry, you'll learn what's going on in this file throughout the course. Yo
 Cameron Pittman
 */
 
-
-/*
-These are HTML strings. As part of the course, you'll be using JavaScript functions
-replace the %data% placeholder text you see in them.
-*/
-const view = {
-  header: {
-    template: {
-      name: '<h1 id="name">%data%</h1>',
-      role: '<span>%data%</span><hr>',
-      mobile: '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>',
-      email: '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>',
-      github: '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>',
-      location: '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>',
-      biopic: '<img src="%data%" class="biopic">',
-      welcomeMessage: '<span class="welcome-message">%data%</span>',
-      skillsStart: '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>',
-      skills: '<li class="flex-item"><span class="white-text">%data%</span></li>'
-    }
-  },
-  work: {
-    template: {
-      start: '<div class="work-entry"></div>',
-      employer: '<a href="#">%data%',
-      title: ' - %data%</a>',
-      dates: '<div class="date-text">%data%</div>',
-      location: '<div class="location-text">%data%</div>',
-      description: '<p><br>%data%</p>'
-    }
-  },
-  project: {
-    template: {
-      start: '<div class="project-entry"></div>',
-      title: '<a href="#">%data%</a>',
-      dates: '<div class="date-text">%data%</div>',
-      description: '<p><br>%data%</p>',
-      image: '<img src="%data%">'
-    }
-  },
-  education: {
-    template: {
-      start: '<div class="education-entry"></div>',
-      name: '<a href="#">%data%',
-      degree: ' -- %data%</a>',
-      dates: '<div class="date-text">%data%</div>',
-      location: '<div class="location-text">%data%</div>',
-      major: '<em><br>Major: %data%</em>',
-      onlineStart: '<h3>Online Classes</h3>',
-      title: '<a href="#">%data%',
-      school: ' - %data%</a>',
-      dates: '<div class="date-text">%data%</div>',
-      url: '<br><a href="#">%data%</a>'
-    }
-  }
-};
-
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
