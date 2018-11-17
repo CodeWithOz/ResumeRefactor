@@ -104,6 +104,9 @@ const model = {
 const octopus = {
   getBioData() {
     return model.bio;
+  },
+  getWorkData() {
+    return model.work;
   }
 };
 
