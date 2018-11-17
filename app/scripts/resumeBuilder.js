@@ -20,7 +20,7 @@ const bio = {
     'Responsive Web Design',
     'Offline Capability with Service Worker API'
   ],
-  biopic: 'https://www.linkedin.com/in/uchechukwu-ozoemena/',
+  biopic: 'images/prof_selfie_2.jpg',
   display: () => console.log('Display function of bio section. 😄')
 };
 
