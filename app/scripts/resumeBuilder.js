@@ -3,12 +3,11 @@ This is empty on purpose! Your code to build the resume will go here.
  */
 const bio = {
   name: 'Uche Ozoemena',
-  role: 'Software Developer',
+  role: 'Web Developer',
   contacts: {
     mobile: 0123456789,
     email: 'codewithoz@outlook.com',
     github: 'https://github.com/CodeWithOz',
-    twitter: '',
     location: 'Abuja'
   },
   welcomeMessage: 'Greetings! I am Uche and I am happy to meet you!',
