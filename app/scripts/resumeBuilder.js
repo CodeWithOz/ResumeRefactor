@@ -102,6 +102,12 @@ const model = {
   ]
 };
 
+const octopus = {
+  getBioData() {
+    return model.bio;
+  }
+};
+
 const view = {
   header: {
     template: {
