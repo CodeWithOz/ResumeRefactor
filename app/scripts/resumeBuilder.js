@@ -121,6 +121,11 @@ const view = {
       welcomeMessage: '<span class="welcome-message">%data%</span>',
       skillsStart: '<h3 id="skills-h3">Skills at a Glance:</h3><ul id="skills" class="flex-column"></ul>',
       skills: '<li class="flex-item"><span class="white-text">%data%</span></li>'
+    },
+    render() {
+      const data = octopus.getBioData();
+      const name = this.template.name.replace('%data%', data.name);
+      $('#header').prepend(name);
     }
   },
   work: {
@@ -156,5 +161,10 @@ const view = {
       dates: '<div class="date-text">%data%</div>',
       url: '<br><a href="#">%data%</a>'
     }
+  },
+  render() {
+    this.header.render();
   }
 };
+
+view.render();
