@@ -169,7 +169,23 @@ const view = {
       location: '<div class="location-text">%data%</div>',
       description: '<p><br>%data%</p>'
     },
-    render() {}
+    render() {
+      const data = octopus.getWorkData();
+      const $workExp = $('#workExperience');
+
+      // bind this object to replaceData
+      const replaceData = view.replaceData.bind(this);
+
+      // add work experience
+      data.forEach(workExp => {
+        $workExp.append(this.template.start);
+        const $entry = $('.work-entry').last(),
+          employer = replaceData('employer', workExp.employer),
+          title = replaceData('title', workExp.title),
+          heading = employer + title;
+        $entry.append(heading);
+      });
+    }
   },
   project: {
     template: {
