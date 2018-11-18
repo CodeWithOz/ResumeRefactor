@@ -258,7 +258,7 @@ const view = {
       // bind this object to replaceData
       const replaceData = view.replaceData.bind(this);
 
-      // add education
+      // add schools
       data.schools.forEach(school => {
         $education.append(this.template.start);
         const $entry = $('.education-entry').last(),
@@ -279,6 +279,24 @@ const view = {
           $entry.append(item);
         });
       });
+
+      // add online courses
+      $education.append(this.template.onlineStart);
+      for (const course of data.onlineCourses) {
+        const title = replaceData('title', course.title),
+          school = replaceData('school', course.school),
+          heading = title + school,
+
+          // array of items to be appended to the entry
+          toAppend = [heading];
+        toAppend.push(replaceData('onlineDate', course.onlineDate));
+        toAppend.push(replaceData('url', course.url));
+
+        // append the items
+        toAppend.forEach(item => {
+          $education.append(item);
+        });
+      }
     }
   },
   replaceData(propName, replacement) {
