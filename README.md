@@ -1,6 +1,12 @@
 # Project Details
 #### Initial Repo
 App files were gotten from the [original Udacity repo](https://github.com/udacity/frontend-nanodegree-resume).
+#### Note
+My objective was to refactor this project to implement separation of
+concerns. The Google Maps segments require some instruction that is
+only available if you take the full course. I have not taken the
+full course so I have only implemented separation of concerns in
+constructing the DOM from the underlying data.
 
 ## How do I complete this project?
 Review the Online Resume [Project Rubric](https://review.udacity.com/?_ga=1.189245867.12280332.1465333852#!/projects/2962818615/rubric).
