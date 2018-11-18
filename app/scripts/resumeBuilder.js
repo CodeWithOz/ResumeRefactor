@@ -84,19 +84,19 @@ const model = {
       title: 'Restaurant Reviews App',
       dates: 'November 2018',
       description: 'A web app providing information about restaurants in different locations.',
-      images: 'N/A'
+      images: ''
     },
     {
       title: 'Arcade Game',
       dates: 'August 2018 - September 2018',
       description: 'A timed game that involves collecting tokens while evading enemies.',
-      images: 'N/A'
+      images: ''
     },
     {
       title: 'Memory Game',
       dates: 'August 2018',
       description: 'A game that tests the player\'s ability to remember things.',
-      images: 'N/A'
+      images: ''
     }
   ]
 };
