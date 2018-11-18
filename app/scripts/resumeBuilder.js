@@ -307,7 +307,10 @@ const view = {
     this.work.render();
     this.projects.render();
     this.education.render();
+  },
+  init() {
+    this.render();
   }
 };
 
-view.render();
+view.init();
