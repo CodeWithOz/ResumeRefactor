@@ -110,6 +110,9 @@ const octopus = {
   },
   getProjectsData() {
     return model.projects;
+  },
+  getEducationData() {
+    return model.education;
   }
 };
 
