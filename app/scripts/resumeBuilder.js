@@ -247,7 +247,8 @@ const view = {
       school: ' - %data%</a>',
       onlineDate: '<div class="date-text">%data%</div>',
       url: '<br><a href="#">%data%</a>'
-    }
+    },
+    render() {}
   },
   replaceData(propName, replacement) {
     return this.template[propName].replace('%data%', replacement);
@@ -256,6 +257,7 @@ const view = {
     this.header.render();
     this.work.render();
     this.projects.render();
+    this.education.render();
   }
 };
 
