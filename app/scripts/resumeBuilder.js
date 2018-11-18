@@ -107,6 +107,9 @@ const octopus = {
   },
   getWorkData() {
     return model.work;
+  },
+  getProjectsData() {
+    return model.projects;
   }
 };
 
