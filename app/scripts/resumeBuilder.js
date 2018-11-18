@@ -313,4 +313,6 @@ const view = {
   }
 };
 
-view.init();
+$(document).ready(function() {
+  view.init();
+});
