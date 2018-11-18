@@ -204,7 +204,8 @@ const view = {
       dates: '<div class="date-text">%data%</div>',
       description: '<p><br>%data%</p>',
       image: '<img src="%data%">'
-    }
+    },
+    render() {}
   },
   education: {
     template: {
@@ -227,6 +228,7 @@ const view = {
   render() {
     this.header.render();
     this.work.render();
+    this.projects.render();
   }
 };
 
