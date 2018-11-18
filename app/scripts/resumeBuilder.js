@@ -200,15 +200,39 @@ const view = {
       });
     }
   },
-  project: {
+  projects: {
     template: {
       start: '<div class="project-entry"></div>',
       title: '<a href="#">%data%</a>',
       dates: '<div class="date-text">%data%</div>',
       description: '<p><br>%data%</p>',
-      image: '<img src="%data%">'
+      images: '<img src="%data%">'
     },
-    render() {}
+    render() {
+      const data = octopus.getProjectsData();
+      const $projects = $('#projects');
+
+      // bind this object to replaceData
+      const replaceData = view.replaceData.bind(this);
+
+      // add projects
+      data.forEach(project => {
+        $projects.append(this.template.start);
+        const $entry = $('.project-entry').last(),
+
+          // array of items to be appended to the entry
+          toAppend = [];
+        toAppend.push(replaceData('title', project.title));
+        toAppend.push(replaceData('dates', project.dates));
+        toAppend.push(replaceData('description', project.description));
+        toAppend.push(replaceData('images', project.images));
+
+        // append the items
+        toAppend.forEach(item => {
+          $entry.append(item);
+        });
+      });
+    }
   },
   education: {
     template: {
