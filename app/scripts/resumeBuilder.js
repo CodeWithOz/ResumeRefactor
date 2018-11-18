@@ -251,7 +251,35 @@ const view = {
       onlineDate: '<div class="date-text">%data%</div>',
       url: '<br><a href="#">%data%</a>'
     },
-    render() {}
+    render() {
+      const data = octopus.getEducationData();
+      const $education = $('#education');
+
+      // bind this object to replaceData
+      const replaceData = view.replaceData.bind(this);
+
+      // add education
+      data.schools.forEach(school => {
+        $education.append(this.template.start);
+        const $entry = $('.education-entry').last(),
+          name = replaceData('name', school.name),
+          degree = replaceData('degree', school.degree),
+          heading = name + degree,
+
+          // array of items to be appended to the entry
+          toAppend = [heading];
+        toAppend.push(replaceData('dates', school.dates));
+        toAppend.push(replaceData('location', school.location));
+        school.majors.forEach(major => {
+          toAppend.push(replaceData('major', major));
+        });
+
+        // append the items
+        toAppend.forEach(item => {
+          $entry.append(item);
+        });
+      });
+    }
   },
   replaceData(propName, replacement) {
     return this.template[propName].replace('%data%', replacement);
